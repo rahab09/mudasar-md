@@ -1,85 +1,95 @@
 
-import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
 
 export function Hero() {
-  const [displayedText, setDisplayedText] = useState('');
-  const fullText = "Full Stack Developer";
-  
-  useEffect(() => {
-    let index = 0;
-    const timer = setInterval(() => {
-      if (index < fullText.length) {
-        setDisplayedText(fullText.slice(0, index + 1));
-        index++;
-      } else {
-        clearInterval(timer);
-      }
-    }, 100);
-
-    return () => clearInterval(timer);
-  }, []);
-
-  const scrollToProjects = () => {
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const scrollToContact = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    element?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-10 -left-10 w-96 h-96 bg-gradient-to-br from-portfolio-blue/20 to-portfolio-purple/20 rounded-full blur-3xl animate-bounce-slow"></div>
-        <div className="absolute -bottom-10 -right-10 w-96 h-96 bg-gradient-to-br from-portfolio-cyan/20 to-portfolio-pink/20 rounded-full blur-3xl animate-bounce-slow" style={{ animationDelay: '1s' }}></div>
-      </div>
-
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-muted/30 to-background relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-gradient-to-r from-portfolio-blue/5 via-portfolio-purple/5 to-portfolio-cyan/5 animate-pulse"></div>
+      
       <div className="container mx-auto px-6 text-center relative z-10">
-        <div className="animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Hi, I'm{' '}
-            <span className="gradient-text">
+        <div className="max-w-4xl mx-auto">
+          {/* Avatar and Name Section */}
+          <div className="flex flex-col items-center mb-8 animate-fade-in">
+            <Avatar className="w-32 h-32 mb-6 ring-4 ring-portfolio-blue/30 hover:ring-portfolio-purple/50 transition-all duration-300 hover:scale-105">
+              <AvatarImage 
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face"
+                alt="Alex Johnson"
+                className="object-cover"
+              />
+              <AvatarFallback className="text-2xl font-bold gradient-text bg-gradient-to-br from-portfolio-blue/20 to-portfolio-purple/20">
+                AJ
+              </AvatarFallback>
+            </Avatar>
+            
+            <h1 className="text-5xl md:text-7xl font-bold gradient-text mb-6">
               Alex Johnson
-            </span>
-          </h1>
-          
-          <div className="text-2xl md:text-3xl text-muted-foreground mb-8 h-12">
-            <span className="animate-slide-in-left">
-              {displayedText}
-              <span className="animate-pulse">|</span>
-            </span>
+            </h1>
           </div>
           
-          <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto animate-slide-in-right">
-            I create amazing web experiences with modern technologies. 
-            Passionate about clean code, beautiful design, and solving complex problems.
+          <h2 className="text-2xl md:text-3xl text-muted-foreground font-medium mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            Full Stack Developer & UI/UX Designer
+          </h2>
+          
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            I craft beautiful, functional web experiences that bring ideas to life. 
+            Passionate about clean code, innovative design, and solving complex problems 
+            with elegant solutions.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-scale-in">
-            <Button 
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+            <Button
               size="lg"
-              onClick={scrollToProjects}
-              className="bg-gradient-to-r from-portfolio-blue to-portfolio-purple hover:from-portfolio-purple hover:to-portfolio-cyan transition-all duration-300 text-white font-semibold px-8 py-3 rounded-full hover:scale-105 hover:shadow-lg hover:shadow-portfolio-blue/25"
+              onClick={() => scrollToSection('projects')}
+              className="bg-gradient-to-r from-portfolio-blue to-portfolio-purple hover:from-portfolio-purple hover:to-portfolio-cyan transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-portfolio-blue/25"
             >
               View My Work
             </Button>
-            <Button 
+            
+            <Button
               variant="outline"
               size="lg"
-              onClick={scrollToContact}
-              className="border-portfolio-blue/50 text-portfolio-blue hover:bg-portfolio-blue/10 hover:border-portfolio-purple/50 hover:text-portfolio-purple transition-all duration-300 font-semibold px-8 py-3 rounded-full hover:scale-105"
+              onClick={() => scrollToSection('contact')}
+              className="border-portfolio-blue/30 hover:border-portfolio-purple/50 hover:bg-portfolio-blue/10 transition-all duration-300 hover:scale-105"
             >
               Get In Touch
             </Button>
           </div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
-          <div className="w-6 h-10 border-2 border-portfolio-blue/50 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-portfolio-blue rounded-full mt-2 animate-pulse"></div>
+          
+          <div className="flex items-center justify-center gap-6 mb-16 animate-fade-in" style={{ animationDelay: '0.8s' }}>
+            {[
+              { icon: Github, href: '#', label: 'GitHub' },
+              { icon: Linkedin, href: '#', label: 'LinkedIn' },
+              { icon: Mail, href: '#', label: 'Email' }
+            ].map(({ icon: Icon, href, label }, index) => (
+              <a
+                key={label}
+                href={href}
+                className="p-3 rounded-full bg-gradient-to-r from-muted/50 to-muted/30 hover:from-portfolio-blue/20 hover:to-portfolio-purple/20 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-portfolio-blue/25 group"
+                aria-label={label}
+                style={{ animationDelay: `${0.8 + index * 0.1}s` }}
+              >
+                <Icon className="w-6 h-6 text-muted-foreground group-hover:text-portfolio-blue transition-colors duration-300" />
+              </a>
+            ))}
+          </div>
+          
+          <div className="animate-bounce-slow">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => scrollToSection('about')}
+              className="rounded-full hover:bg-portfolio-blue/10 transition-all duration-300"
+            >
+              <ChevronDown className="w-6 h-6 text-muted-foreground" />
+            </Button>
           </div>
         </div>
       </div>
