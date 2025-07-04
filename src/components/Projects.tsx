@@ -6,19 +6,17 @@ import { Badge } from '@/components/ui/badge';
 export function Projects() {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution built with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.',
-      image: '/placeholder.svg',
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
-      liveUrl: '#',
-      githubUrl: '#'
+      title: 'Multiplatform News App',
+      description: 'Stay informed with our sleek, cross-platform News App built using Flutter and Dart. Designed for Android, iOS, Web, and Desktop, this app delivers real-time news from trusted sources in a fast, responsive, and beautifully crafted UI.',
+      image: '/assets/newsy.png',
+      technologies: ['Flutter', 'Dart','REST API'],
+      githubUrl: 'https://github.com/SafuRaja7/News-App-Multi-Platform'
     },
     {
       title: 'Task Management App',
       description: 'A collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.',
       image: '/placeholder.svg',
       technologies: ['Vue.js', 'Express.js', 'MongoDB', 'Socket.io'],
-      liveUrl: '#',
       githubUrl: '#'
     },
     {
@@ -26,7 +24,6 @@ export function Projects() {
       description: 'A dashboard application that uses machine learning to provide insights from business data with interactive charts and visualizations.',
       image: '/placeholder.svg',
       technologies: ['Python', 'React', 'TensorFlow', 'D3.js'],
-      liveUrl: '#',
       githubUrl: '#'
     },
     {
@@ -34,7 +31,6 @@ export function Projects() {
       description: 'A modern real estate platform with advanced search filters, virtual tours, and mortgage calculator integration.',
       image: '/placeholder.svg',
       technologies: ['Next.js', 'TypeScript', 'Prisma', 'Mapbox'],
-      liveUrl: '#',
       githubUrl: '#'
     },
     {
@@ -42,7 +38,6 @@ export function Projects() {
       description: 'A comprehensive social media management tool that allows scheduling posts, analytics tracking, and multi-platform integration.',
       image: '/placeholder.svg',
       technologies: ['React', 'Node.js', 'Redis', 'AWS S3'],
-      liveUrl: '#',
       githubUrl: '#'
     },
     {
@@ -108,18 +103,13 @@ export function Projects() {
                 
                 <div className="flex gap-3">
                   <Button 
+                    onClick={() => window.open(project.githubUrl, '_blank')}
                     size="sm"
                     className="bg-gradient-to-r from-portfolio-blue to-portfolio-purple hover:from-portfolio-purple hover:to-portfolio-cyan transition-all duration-300 text-white flex-1"
                   >
-                    Live Demo
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    size="sm"
-                    className="border-portfolio-blue/50 text-portfolio-blue hover:bg-portfolio-blue/10 hover:border-portfolio-purple/50 hover:text-portfolio-purple transition-all duration-300 flex-1"
-                  >
                     GitHub
                   </Button>
+                
                 </div>
               </CardContent>
             </Card>

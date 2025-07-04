@@ -16,18 +16,15 @@ export function About() {
           <div className="animate-slide-in-left">
             <Card className="hover-glow border-portfolio-blue/20 bg-gradient-to-br from-background to-muted/30">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-6 text-portfolio-blue">My Journey</h3>
+                <h3 className="text-2xl font-bold mb-6 text-portfolio-blue">My Flutter Journey</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  With over 5 years of experience in web development, I've had the pleasure of working 
-                  with startups and established companies to bring their digital visions to life.
+                  With over 2 years of dedicated experience in mobile development, I've had the privilege of building innovative Flutter applications for a diverse range of clients and companies.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  I specialize in React, Node.js, and modern web technologies. My passion lies in 
-                  creating seamless user experiences and writing clean, maintainable code.
+                  I specialize in creating high-performance, cross-platform apps with beautiful user interfaces. My passion lies in leveraging the full power of the Flutter framework to deliver seamless and engaging mobile experiences.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  When I'm not coding, you can find me exploring new technologies, contributing to 
-                  open source projects, or enjoying a good book on software architecture.
+                  When I'm not crafting widgets, you'll find me exploring the latest trends in mobile UI/UX, contributing to the Flutter community, or diving deep into advanced Dart concepts.
                 </p>
               </CardContent>
             </Card>
@@ -37,7 +34,7 @@ export function About() {
             <div className="grid grid-cols-2 gap-6">
               {[
                 { number: '50+', label: 'Projects Completed' },
-                { number: '5+', label: 'Years Experience' },
+                { number: '2+', label: 'Years Experience' },
                 { number: '20+', label: 'Happy Clients' },
                 { number: '100%', label: 'Commitment' }
               ].map((stat, index) => (

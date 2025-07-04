@@ -2,6 +2,8 @@
 import { useState, useEffect } from 'react';
 import { ThemeToggle } from './ThemeToggle';
 import { Button } from '@/components/ui/button';
+import { Download } from 'lucide-react';
+
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,7 +32,7 @@ export function Header() {
     >
       <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
         <div className="text-2xl font-bold gradient-text animate-fade-in">
-          Portfolio
+          DevFolio
         </div>
         
         <div className="hidden md:flex items-center space-x-8">
@@ -46,10 +48,22 @@ export function Header() {
             </Button>
           ))}
         </div>
-
         <div className="flex items-center space-x-4">
+  <a
+    href="/assets/resume.pdf"
+    download
+    className="flex items-center space-x-2 text-sm font-medium px-4 py-2 border border-border rounded-md hover:bg-muted transition-colors duration-300 animate-fade-in"
+    style={{ animationDelay: '0.4s' }}
+  >
+    <Download className="w-4 h-4" />
+    <span>Resume</span>
+  </a>
+</div>
+
+
+        {/* <div className="flex items-center space-x-4">
           <ThemeToggle />
-        </div>
+        </div> */}
       </nav>
     </header>
   );

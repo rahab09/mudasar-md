@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 
@@ -7,36 +6,30 @@ export function Skills() {
     {
       title: 'Frontend',
       skills: [
-        { name: 'React/Next.js', level: 95 },
-        { name: 'TypeScript', level: 90 },
-        { name: 'Tailwind CSS', level: 95 },
-        { name: 'Vue.js', level: 80 }
+        { name: 'Flutter', level: 90 },
+        { name: 'Dart', level: 90 },
       ]
     },
     {
       title: 'Backend',
       skills: [
-        { name: 'Node.js', level: 90 },
-        { name: 'Python', level: 85 },
-        { name: 'PostgreSQL', level: 85 },
-        { name: 'MongoDB', level: 80 }
+        { name: 'Firebase', level: 90 },
+        { name: 'PostgreSQL', level: 90 },
+        { name: 'MongoDB', level: 90 },
       ]
     },
     {
       title: 'Tools & Others',
       skills: [
         { name: 'Git/GitHub', level: 95 },
-        { name: 'Docker', level: 80 },
-        { name: 'AWS', level: 75 },
-        { name: 'Figma', level: 85 }
+        { name: 'Figma', level: 85 },
       ]
     }
   ];
 
   const technologies = [
-    'React', 'TypeScript', 'Node.js', 'Python', 'Next.js', 'Vue.js', 
-    'Tailwind CSS', 'PostgreSQL', 'MongoDB', 'Docker', 'AWS', 'Git',
-    'Express.js', 'GraphQL', 'REST APIs', 'Jest', 'Cypress', 'Figma'
+    'Flutter', 'Dart', 'Python', 'PostgreSQL', 'MongoDB', 'Git',
+    'GraphQL', 'REST APIs', 'Figma'
   ];
 
   return (
