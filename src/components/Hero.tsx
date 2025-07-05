@@ -11,7 +11,7 @@ export function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-muted/30 to-background relative overflow-hidden pt-24 md:pt-0">
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-muted/30 to-background relative overflow-hidden pt-24 md:pt-20">
       {" "}
       <BackgroundParticles />
       {/* Background decoration */}
@@ -29,7 +29,7 @@ export function Hero() {
               />
 
               <AvatarFallback className="text-2xl font-bold gradient-text bg-gradient-to-br from-portfolio-blue/20 to-portfolio-purple/20">
-                AJ
+                
               </AvatarFallback>
             </Avatar>
 

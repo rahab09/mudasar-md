@@ -24,7 +24,7 @@ export function Projects() {
         "Developed at Dexplat, this intuitive mobile/web platform streamlines pool management and guest services. It features a clean UI, real-time booking, and admin tools for operational efficiency.",
       image: "/assets/poolart.png",
       technologies: ["Flutter", "Dart", "Firebase"],
-      web: "#",
+      web: "https://",
     },
     {
       title: "DevFolio",
@@ -34,31 +34,6 @@ export function Projects() {
       technologies: ["React", "Tailwind CSS", "Vite", "Typescript"],
       githubUrl: "https://github.com/SafuRaja7/saifuraja-dev.git",
       web: "https://saifu.me",
-    },
-    {
-      title: "Real Estate Platform",
-      description:
-        "A modern real estate platform with advanced search filters, virtual tours, and mortgage calculator integration.",
-      image: "/assets/poolart.png",
-      technologies: ["Next.js", "TypeScript", "Prisma", "Mapbox"],
-      githubUrl: "#",
-    },
-    {
-      title: "Social Media Dashboard",
-      description:
-        "A comprehensive social media management tool that allows scheduling posts, analytics tracking, and multi-platform integration.",
-      image: "/assets/poolart.png",
-      technologies: ["React", "Node.js", "Redis", "AWS S3"],
-      githubUrl: "#",
-    },
-    {
-      title: "Learning Management System",
-      description:
-        "An educational platform with course creation tools, progress tracking, and interactive video lessons with quiz integration.",
-      image: "/assets/poolart.png",
-      technologies: ["React", "GraphQL", "PostgreSQL", "AWS"],
-      liveUrl: "#",
-      githubUrl: "#",
     },
   ];
 
@@ -128,11 +103,9 @@ export function Projects() {
                     </Button>
                   )}
 
-                  {(project.web || project.liveUrl) && (
+                  {project.web && (
                     <Button
-                      onClick={() =>
-                        window.open(project.web || project.liveUrl, "_blank")
-                      }
+                      onClick={() => window.open(project.web, "_blank")}
                       size="sm"
                       variant="outline"
                       className="flex-1 text-portfolio-blue border-portfolio-blue hover:bg-portfolio-blue/10"
