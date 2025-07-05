@@ -23,7 +23,7 @@ export default function BackgroundParticles() {
             value: 60,
             density: { enable: true, area: 800 },
           },
-          color: { value: '#9CA3AF' }, // Tailwind `text-muted-foreground`
+          color: { value: '#9CA3AF' }, 
           shape: { type: 'circle' },
           opacity: { value: 0.5 },
           size: { value: 3 },
