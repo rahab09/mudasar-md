@@ -32,7 +32,7 @@ export function Projects() {
         "DevFolio is a sleek, fully responsive portfolio template for developers. It showcases skills, projects, and contact info, and is optimized for fast performance across mobile and desktop platforms.",
       image: "/assets/devfolio.png",
       technologies: ["React", "Tailwind CSS", "Vite", "Typescript"],
-      githubUrl: "#",
+      githubUrl: "https://github.com/SafuRaja7/saifuraja-dev.git",
       web: "https://saifu.me",
     },
     {
