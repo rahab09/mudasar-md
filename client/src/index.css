@@ -234,10 +234,6 @@ html {
   animation: fadeInUp 0.8s ease-out forwards;
 }
 
-.animate-slide-up {
-  animation: fadeInUp 0.8s ease-out forwards;
-}
-
 .animate-slide-in-left {
   animation: slideInLeft 0.8s ease-out forwards;
 }
