@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
 import BackgroundParticles from "@/components/BackgroundParticles";
-import saifAvatar from "/assets/me.jpeg";
+import mudasarAvatar from "@assets/Black Pattern Minimalist LinkedIn Profile Picture (1)_1752027422161.png";
 
 export function Hero() {
   const scrollToSection = (sectionId: string) => {
@@ -23,8 +23,8 @@ export function Hero() {
           <Avatar className="w-40 h-30 mb-6 ring-4 ring-portfolio-blue/30 hover:ring-portfolio-purple/50 transition-all duration-300 hover:scale-105">
 
               <AvatarImage
-                src={saifAvatar}
-                alt="Muhammad Saif Waheed"
+                src={mudasarAvatar}
+                alt="Mudasar MD"
                 className="object-cover"
               />
 
@@ -34,7 +34,7 @@ export function Hero() {
             </Avatar>
 
             <h1 className="text-5xl md:text-7xl font-bold gradient-text mb-6">
-              Muhammad Saif Waheed
+              Mudasar MD
             </h1>
           </div>
 
@@ -42,17 +42,16 @@ export function Hero() {
             className="text-2xl md:text-3xl text-muted-foreground font-medium mb-8 animate-fade-in"
             style={{ animationDelay: "0.2s" }}
           >
-            Flutter Developer
+            Full Stack Developer | React.js • Node.js • Web3 • Blockchain • AI/ML | UI/UX Wizard
           </h2>
 
           <p
             className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in"
             style={{ animationDelay: "0.4s" }}
           >
-            I build beautiful and high-performance cross-platform mobile apps
-            with Flutter. I&apos;m passionate about creating intuitive user
-            interfaces, writing clean, maintainable code, and turning complex
-            ideas into smooth, responsive mobile experiences
+            Problem Solver by Nature | Full Stack Developer by Practice | Tech Collaborator by Choice.
+            I specialize in React.js, Node.js, MongoDB, PostgreSQL, and blockchain technologies. 
+            I also integrate AI tools to make apps smarter and better.
           </p>
 
           <div
@@ -84,17 +83,17 @@ export function Hero() {
             {[
               {
                 icon: Github,
-                href: "https://github.com/safuraja7",
+                href: "https://github.com/mudasarmd09",
                 label: "GitHub",
               },
               {
                 icon: Linkedin,
-                href: "https://www.linkedin.com/in/safuraja7/",
+                href: "https://linkedin.com/in/mudasar-md-6921b235a",
                 label: "LinkedIn",
               },
               {
                 icon: Mail,
-                href: "mailto:rajasaifi49@gmail.com",
+                href: "mailto:mudasarmd09@gmail.com",
                 label: "Email",
               },
             ].map(({ icon: Icon, href, label }, index) => (

@@ -16,15 +16,15 @@ export function About() {
           <div className="animate-slide-in-left">
             <Card className="hover-glow border-portfolio-blue/20 bg-gradient-to-br from-background to-muted/30">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-6 text-portfolio-blue">My Flutter Journey</h3>
+                <h3 className="text-2xl font-bold mb-6 text-portfolio-blue">My Development Journey</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  With over 2 years of dedicated experience in mobile development, I've had the privilege of building innovative Flutter applications for a diverse range of clients and companies.
+                  Over the past year, I have worked closely with designers, developers, and AI experts to turn many ideas into real products — whether that meant building modern Web3 dashboards, mobile-first platforms, or integrating OpenAI into smart business tools.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  I specialize in creating high-performance, cross-platform apps with beautiful user interfaces. My passion lies in leveraging the full power of the Flutter framework to deliver seamless and engaging mobile experiences.
+                  My primary stack revolves around React.js, Node.js, MongoDB, and PostgreSQL. Additionally, I have been learning blockchain technologies in depth, such as Solidity, Web3.js, and NFT smart contracts.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  When I'm not crafting widgets, you'll find me exploring the latest trends in mobile UI/UX, contributing to the Flutter community, or diving deep into advanced Dart concepts.
+                  What truly drives me is solving real problems with code — from intuitive UI/UX designs to scalable backend logic. Every project is an opportunity for me to explore, refine, and deliver.
                 </p>
               </CardContent>
             </Card>

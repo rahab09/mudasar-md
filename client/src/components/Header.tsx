@@ -32,7 +32,7 @@ export function Header() {
     >
       <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
         <div className="text-2xl font-bold gradient-text animate-fade-in">
-          DevFolio
+          Mudasar MD
         </div>
         
         <div className="hidden md:flex items-center space-x-8">

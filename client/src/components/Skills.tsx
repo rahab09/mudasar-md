@@ -6,30 +6,32 @@ export function Skills() {
     {
       title: 'Frontend',
       skills: [
-        { name: 'Flutter', level: 90 },
-        { name: 'Dart', level: 90 },
+        { name: 'React.js', level: 90 },
+        { name: 'Tailwind CSS', level: 85 },
+        { name: 'JavaScript', level: 90 },
       ]
     },
     {
       title: 'Backend',
       skills: [
-        { name: 'Firebase', level: 90 },
-        { name: 'PostgreSQL', level: 90 },
-        { name: 'MongoDB', level: 90 },
+        { name: 'Node.js', level: 90 },
+        { name: 'MongoDB', level: 85 },
+        { name: 'PostgreSQL', level: 85 },
       ]
     },
     {
-      title: 'Tools & Others',
+      title: 'Blockchain & AI',
       skills: [
-        { name: 'Git/GitHub', level: 95 },
-        { name: 'Figma', level: 85 },
+        { name: 'Solidity', level: 80 },
+        { name: 'Web3.js', level: 75 },
+        { name: 'OpenAI APIs', level: 80 },
       ]
     }
   ];
 
   const technologies = [
-    'Flutter', 'Dart', 'Python', 'PostgreSQL', 'MongoDB', 'Git',
-    'GraphQL', 'REST APIs', 'Figma'
+    'React.js', 'Node.js', 'MongoDB', 'PostgreSQL', 'Solidity', 'Web3.js', 
+    'Ethers.js', 'Tailwind', 'Figma', 'AI/ML Tools (OpenAI)'
   ];
 
   return (
