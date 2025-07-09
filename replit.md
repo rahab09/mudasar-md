@@ -1,0 +1,106 @@
+# DevFolio Portfolio Application
+
+## Overview
+
+This is a full-stack portfolio application built with React, TypeScript, and Express.js. It features a modern, responsive design using shadcn/ui components and Tailwind CSS. The application is structured as a monorepo with separate client and server directories, along with shared schema definitions.
+
+## User Preferences
+
+Preferred communication style: Simple, everyday language.
+
+## System Architecture
+
+### Frontend Architecture
+- **Framework**: React with TypeScript
+- **Build Tool**: Vite for fast development and optimized builds
+- **Styling**: Tailwind CSS with shadcn/ui component library
+- **State Management**: React Query for server state management
+- **Routing**: React Router for client-side navigation
+- **Theme Support**: Built-in dark/light mode toggle with theme persistence
+
+### Backend Architecture
+- **Framework**: Express.js with TypeScript
+- **Database**: PostgreSQL with Drizzle ORM
+- **Database Provider**: Neon Database (serverless PostgreSQL)
+- **Storage Interface**: Abstracted storage layer with in-memory implementation for development
+- **Session Management**: PostgreSQL session store with connect-pg-simple
+
+### Database Schema
+- **ORM**: Drizzle ORM with TypeScript-first approach
+- **Schema Location**: `shared/schema.ts` for type safety across client and server
+- **Migrations**: Handled through Drizzle Kit
+- **Current Tables**: Users table with username/password authentication
+
+## Key Components
+
+### Client Components
+- **Portfolio Sections**: Hero, About, Skills, Projects, Experience, Contact
+- **UI Components**: Comprehensive shadcn/ui component library
+- **Theme System**: Dark/light mode with system preference detection
+- **Animation**: CSS-based animations and transitions
+- **Form Handling**: React Hook Form with validation
+- **Email Integration**: EmailJS for contact form functionality
+
+### Server Components
+- **API Routes**: RESTful API structure with `/api` prefix
+- **Storage Layer**: Abstract interface supporting multiple storage backends
+- **Development Storage**: In-memory storage for development/testing
+- **Production Storage**: PostgreSQL with Drizzle ORM
+- **Development Server**: Vite integration for hot module replacement
+
+### Shared Components
+- **Type Safety**: Shared TypeScript types between client and server
+- **Schema Validation**: Zod schemas for runtime validation
+- **Database Types**: Drizzle-generated types for type-safe database operations
+
+## Data Flow
+
+1. **Client Requests**: React components make API calls using React Query
+2. **Server Processing**: Express routes handle requests and interact with storage layer
+3. **Data Persistence**: Storage interface abstracts database operations
+4. **Type Safety**: Shared schemas ensure consistent data structures
+5. **Real-time Updates**: React Query handles caching and background updates
+
+## External Dependencies
+
+### Database
+- **Neon Database**: Serverless PostgreSQL hosting
+- **Connection**: Environment variable `DATABASE_URL` required
+
+### Email Service
+- **EmailJS**: Contact form email delivery
+- **Configuration**: Service ID, template ID, and public key in Contact component
+
+### UI Libraries
+- **Radix UI**: Accessible component primitives
+- **Tailwind CSS**: Utility-first CSS framework
+- **Lucide React**: Icon library
+
+### Development Tools
+- **Vite**: Build tool and development server
+- **ESBuild**: Fast JavaScript bundler for production
+- **TypeScript**: Type checking and compilation
+- **Replit Integration**: Development environment optimizations
+
+## Deployment Strategy
+
+### Development
+- **Command**: `npm run dev`
+- **Features**: Hot module replacement, error overlays, Vite development server
+- **Database**: Uses in-memory storage or development PostgreSQL instance
+
+### Production Build
+- **Client Build**: `vite build` creates optimized static assets
+- **Server Build**: `esbuild` bundles server code for Node.js
+- **Output**: `dist/` directory with both client and server bundles
+
+### Production Deployment
+- **Command**: `npm start`
+- **Server**: Node.js serves both API and static files
+- **Database**: Requires PostgreSQL connection via `DATABASE_URL`
+- **Environment**: Production mode with optimized builds
+
+### Database Management
+- **Schema Push**: `npm run db:push` applies schema changes
+- **Migrations**: Generated in `migrations/` directory
+- **Type Safety**: Automatic type generation from schema
