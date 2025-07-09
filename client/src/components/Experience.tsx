@@ -56,7 +56,7 @@ export function Experience() {
         </div>
 
         <div className="space-y-12 max-w-6xl mx-auto">
-          {experiences.map((exp, index) => {
+          {(experiences || []).map((exp, index) => {
             const IconComponent = exp.icon;
             return (
               <Card
