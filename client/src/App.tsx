@@ -19,6 +19,8 @@ const App = () => (
         <Sonner />
         <Router>
           <Route path="/" component={Index} />
+          <Route path="/home" component={Index} />
+          <Route path="/index" component={Index} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" component={NotFound} />
         </Router>
