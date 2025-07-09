@@ -31,12 +31,12 @@ export function Contact() {
         templateParams,
         'mjwsxJlC_FF8hUsr3'         // Your EmailJS public key
       );
-  
+
       toast({
         title: "Message sent!",
         description: "Thanks for reaching out. I’ll get back to you soon.",
       });
-  
+
       // Reset form fields
       setName('');
       setEmail('');

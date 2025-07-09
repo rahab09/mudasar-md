@@ -156,7 +156,7 @@ export function Skills() {
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 max-w-6xl mx-auto">
             {technologies.map((tech, index) => (
               <div 
-                key={`${tech.name}-${index}`}
+                key={`tech-${tech.name}-${index}`}
                 className={`p-4 rounded-xl bg-gradient-to-br from-background/80 to-muted/20 border border-portfolio-blue/20 hover:border-portfolio-purple/40 transition-all duration-300 hover:scale-105 hover:shadow-lg group animate-scale-in`}
                 style={{ animationDelay: `${index * 0.05}s` }}
               >

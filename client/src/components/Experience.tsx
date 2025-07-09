@@ -42,6 +42,35 @@ const experiences = [
 ];
 
 export function Experience() {
+  const experiences = [
+    {
+      title: "Senior Full Stack Developer",
+      company: "Freelance",
+      duration: "2022 - Present",
+      description: "Specialized in React.js, Node.js, and blockchain development, delivering scalable solutions for global clients.",
+      highlights: {
+        projects: "15+",
+        clients: "8",
+        technologies: "12+",
+        satisfaction: "100%"
+      },
+      technologies: ["React.js", "Node.js", "TypeScript", "MongoDB", "Solidity", "Web3.js"]
+    },
+    {
+      title: "Blockchain Developer",
+      company: "Various Projects",
+      duration: "2023 - Present", 
+      description: "Developed smart contracts and DApps using Solidity, Web3.js, and modern blockchain technologies.",
+      highlights: {
+        contracts: "10+",
+        dapps: "5",
+        audits: "0",
+        networks: "3"
+      },
+      technologies: ["Solidity", "Web3.js", "Ethers.js", "React.js", "MetaMask"]
+    }
+  ];
+
   return (
     <section id="experience" className="py-20 bg-gradient-to-br from-muted/20 to-background">
       <div className="container mx-auto px-6">
@@ -54,6 +83,48 @@ export function Experience() {
             Delivering exceptional results through innovative technology solutions and collaborative expertise
           </p>
         </div>
+
+        <div className="space-y-12">
+          {experiences.map((exp, index) => (
+            <div key={`experience-${index}`} className="card-premium animate-slide-up" style={{ animationDelay: `${index * 0.2}s` }}>
+              <div className="flex flex-col lg:flex-row gap-8">
+                <div className="lg:w-1/3">
+                  <h3 className="text-2xl font-bold gradient-text mb-2">{exp.title}</h3>
+                  <p className="text-portfolio-blue font-semibold mb-1">{exp.company}</p>
+                  <p className="text-muted-foreground text-sm">{exp.duration}</p>
+                </div>
+                
+                <div className="lg:w-2/3 space-y-6">
+                  <p className="text-foreground leading-relaxed">{exp.description}</p>
+                  
+                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 text-center">
+                    {Object.entries(exp.highlights).map(([key, value]) => (
+                      <div key={`${key}-${index}`} className="p-3 bg-gradient-to-r from-portfolio-blue/5 to-portfolio-purple/5 rounded-lg">
+                        <div className="text-xl font-bold gradient-text">{value}</div>
+                        <div className="text-xs text-muted-foreground capitalize">{key}</div>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-lg font-semibold mb-4 text-portfolio-blue">Technology Stack</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {exp.technologies.map((tech) => (
+                        <span
+                          key={`${tech}-${index}`}
+                          className="px-3 py-1 bg-portfolio-blue/10 text-portfolio-blue border border-portfolio-blue/20 rounded-full text-sm"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
 
         <div className="space-y-12 max-w-6xl mx-auto">
           {experiences.map((exp, index) => {
