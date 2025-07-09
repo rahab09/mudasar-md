@@ -19,8 +19,9 @@ const App = () => (
         <Sonner />
         <Router>
           <Route path="/" component={Index} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" component={NotFound} />
+          <Route path="/home" component={Index} />
+          <Route path="/index" component={Index} />
+          <Route component={NotFound} />
         </Router>
       </TooltipProvider>
     </ThemeProvider>

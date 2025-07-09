@@ -1,18 +1,17 @@
 
 export function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-muted/50 to-background border-t border-border/50">
-      <div className="container mx-auto px-6 py-12">
+    <footer className="bg-muted/30 border-t border-border/50 py-12">
+      <div className="container mx-auto px-6">
         <div className="text-center">
-          <div className="text-2xl font-bold gradient-text mb-4">
-            Mudasar MD
+          <div className="flex items-center justify-center space-x-2 mb-4">
+            <span className="text-muted-foreground">Made with</span>
+            <span className="text-red-500 text-xl">❤️</span>
+            <span className="text-muted-foreground">and lots of</span>
+            <span className="text-xl">☕</span>
           </div>
-          <p className="text-muted-foreground mb-6">
-            Problem Solver by Nature | Full Stack Developer by Practice | Tech Collaborator by Choice
-          </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-portfolio-blue to-portfolio-purple mx-auto rounded-full mb-6"></div>
           <p className="text-sm text-muted-foreground">
-            Made with ❤️ and lots of ☕
+            © 2024 Mudasar MD. All rights reserved.
           </p>
         </div>
       </div>
